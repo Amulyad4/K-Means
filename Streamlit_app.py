@@ -16,42 +16,98 @@ st.set_page_config(
 
 # Custom CSS for better styling
 st.markdown("""
-    <style>
-        .main {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        .stMetric {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 5px solid #667eea;
-        }
-        h1 {
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            margin-bottom: 10px;
-        }
-        h2 {
-            color: #ffffff;
-            margin-top: 30px;
-        }
-        .prediction-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 30px;
-            border-radius: 15px;
-            color: white;
-            text-align: center;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        }
-        .cluster-info {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 10px 0;
-            border-left: 5px solid #667eea;
-        }
-    </style>
+<style>
+
+/* App background */
+.stApp {
+    background-color: #0f172a;
+}
+
+/* Main container spacing */
+.main {
+    background-color: #0f172a;
+}
+
+/* Titles */
+h1 {
+    color: #e5e7eb;
+    text-align: center;
+}
+
+h2, h3 {
+    color: #e5e7eb;
+}
+
+/* Subtitle text */
+p {
+    color: #cbd5e1;
+}
+
+/* Metric cards */
+.stMetric {
+    background-color: #111827;
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid #1f2937;
+}
+
+/* Input section cards */
+.block-container {
+    padding-top: 2rem;
+}
+
+/* Prediction result card */
+.prediction-box {
+    background-color: #111827;
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid #2563eb;
+    color: #e5e7eb;
+    text-align: center;
+}
+
+/* Cluster info cards */
+.cluster-info {
+    background-color: #111827;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #1f2937;
+    margin: 10px 0;
+    color: #cbd5e1;
+}
+
+/* Buttons */
+.stButton>button {
+    background-color: #2563eb;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 22px;
+    border: none;
+}
+
+.stButton>button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Slider label text */
+label {
+    color: #e5e7eb !important;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #020617;
+}
+
+/* Remove white top bar */
+header {
+    background-color: #020617 !important;
+}
+
+</style>
 """, unsafe_allow_html=True)
+
+
 
 # Load the trained model
 @st.cache_resource
